@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="71dp"
+        android:layout_marginBottom="62dp"
+        android:text="@string/signUp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signUpPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:ems="10"
+        android:hint="@string/userName"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/signUpPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/signUpPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/signUp"
+        app:layout_constraintStart_toStartOf="@+id/signUpPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPersonName" />
+
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="39dp"
+        android:onClick="onClickSignUp"
+        android:text="@string/signUp"
+        app:layout_constraintBottom_toTopOf="@+id/suggestTxtView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPassword" />
+
+    <TextView
+        android:id="@+id/suggestTxtView"
+        android:layout_width="211dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="276dp"
+        android:gravity="center_horizontal"
+        android:onClick="onClickSignUp"
+        android:text="@string/suggestLogin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
